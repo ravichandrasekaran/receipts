@@ -1,0 +1,114 @@
+     Ref                                        Description  ... Unit Price  Amount
+0    NaN                              Courier Track & Trace  ...        NaN     NaN
+1    NaN                                     Chiller bag  3  ...        NaN     NaN
+2    NaN                                  Standard Packs  4  ...        NaN     NaN
+3    NaN  Delivery: Mon 18 Feb 2019 between  1:30 pm and...  ...        NaN     NaN
+4    NaN                 Fulfilled By: CD Johnsonville Mall  ...        NaN     NaN
+5    NaN                                             Bakery  ...        NaN     NaN
+6    1.0                    Coen bros bagels poppy seed 4pk  ...      $4.80   $4.80
+7    2.0          Quality bakers english muffins splits 6pk  ...      $3.00   $3.00
+8    3.0              Vogels toast bread sunflower & barley  ...      $4.20   $4.20
+9    NaN                                               720g  ...        NaN     NaN
+10   7.0                    Golden crumpets rounds 300g 6pk  ...      $2.00   $2.00
+11   NaN                               Deli & Chilled Foods  ...        NaN     NaN
+12  10.0                            Tararua butter pdm 500g  ...      $4.80   $4.80
+13  19.0               Alpine cheese grated mozzarella 550g  ...      $7.50   $7.50
+14  20.0         Anchor protein plus yoghurt tub plain 950g  ...      $6.00   $6.00
+15  21.0            Bega stringers cheese snack cheese 160g  ...      $6.00   $6.00
+16   NaN                                                8pk  ...        NaN     NaN
+17  22.0                 Greater hummus roasted garlic 500g  ...      $5.80   $5.80
+18  23.0                   Meadow fresh milk organic pdm 2l  ...      $6.79   $6.79
+
+[19 rows x 9 columns]
+     Ref                                Description  ...  Unit Price  Amount
+0    NaN                         Fruit & Vegetables  ...         NaN     NaN
+1   24.0        Countdown onions brown 1.5kg bagged  ...       $3.99   $3.99
+2   25.0      Fresh produce apples sweetango per kg  ...       $5.99   $5.99
+3    NaN                                      loose  ...         NaN     NaN
+4   26.0          Fresh produce broccoli head  each  ...       $1.80   $3.60
+5   27.0     Fresh produce carrots pdm per kg loose  ...       $2.68   $4.02
+6   28.0      Fresh produce cauliflower whole  each  ...       $2.99   $2.99
+7   29.0       Fresh produce cucumbers telegraph nz  ...       $2.49   $2.49
+8    NaN                                       each  ...         NaN     NaN
+9   30.0  Fresh produce nectarines yellow flesh per  ...       $5.00   $3.75
+10   NaN                                   kg loose  ...         NaN     NaN
+11  31.0  Fresh produce peaches yellow flesh per kg  ...       $5.00   $3.75
+12   NaN                                      loose  ...         NaN     NaN
+13  32.0       Fresh produce plums red per kg loose  ...       $6.00   $4.50
+14  33.0        Fresh produce potatoes lotatoes 2kg  ...       $7.99   $7.99
+15   NaN                                     bagged  ...         NaN     NaN
+16  34.0     Fresh produce tomatoes vintage harvest  ...       $3.00   $3.00
+17   NaN                     sugar babes  prepacked  ...         NaN     NaN
+18  35.0      Fresh produce watermelon seeded whole  ...       $5.50   $5.50
+19   NaN                                       each  ...         NaN     NaN
+
+[20 rows x 7 columns]
+                                 Ref Description  ...   Amount
+0                     Chocolate, Sweets & Snacks  ...      NaN
+1    14 Nature valley crunchy muesli bars oats &  ...    $3.00
+2                                 honey 210g 5pk  ...      NaN
+3   15 Nature valley crunchy muesli bars variety  ...    $3.00
+4                                       210g 5pk  ...      NaN
+5     16 Pop n good popcorn light & buttery 150g  ...    $2.30
+6                            Cleaning & Homecare  ...      NaN
+7        17 Ecostore dishwasher tablets pdm 30pk  ...   $19.98
+8     18 Kiwi soft toilet paper 12pk prints 2ply  ...    $3.50
+9                               Meal Ingredients  ...      NaN
+10   38 Countdown mexican tortillas burrito 690g  ...    $4.00
+11                                          15pk  ...      NaN
+12      39 Delmaine olives pitted green 450g jar  ...    $4.99
+13                                           NaN  ...  $242.66
+14                                   Credit Card  ...      NaN
+15                                           NaN  ...    $0.00
+16                                           NaN  ...  $242.66
+17                                           NaN  ...   $31.64
+18                                           NaN  ...      NaN
+
+[19 rows x 7 columns]
+No table identified
+                  PriceProduct ID Product Description  ... Unnamed: 4
+0                                                 NaN  ...          $
+1                                              Bakery  ...        NaN
+2   9415459800216 Danny's Pita Bread Wholemeal Garlic  ...      $4.79
+3                                   Breakfast Cereals  ...        NaN
+4   9414942805653 Sanitarium Weet-Bix Breakfast Ce...  ...      $6.49
+5   9414727777823 Harraways Organic Rolled Oats Br...  ...      $4.79
+6                                         Cereal 800g  ...        NaN
+7   9415748003243 Ceres Organics Apricot & Almond ...  ...     $10.99
+8   9414942801198 Sanitarium Cranberry & Toasted A...  ...      $4.99
+9                                         Muesli 650g  ...        NaN
+10  9414917073919 Grain Health Foods Toasted Muesl...  ...      $7.79
+11                                                1kg  ...        NaN
+12  9400097034581 Healtheries Apple, Raisin & Date...  ...      $6.43
+13                                        Muesli 595g  ...        NaN
+14  9420011900181 Nicola's Organics Unsweetened Or...  ...      $9.99
+15                                        Muesli 675g  ...        NaN
+16                                           Butchery  ...        NaN
+17  9416369197083 Hellers Gluten Free Original Sau...  ...      $9.99
+18                            Canned & Prepared Foods  ...        NaN
+19  87839700011 Ceres Organics Organics Pinto Bean...  ...      $5.38
+
+[20 rows x 5 columns]
+                  PriceProduct ID Product Description  ... Unnamed: 4
+0                                                 NaN  ...          $
+1                                        Dairy & Eggs  ...        NaN
+2           9421019740137 Zany Zeus Greek Yoghurt 1kg  ...      $8.99
+3                 9414997006616 Tatua Sour Cream 200g  ...      $1.79
+4                         Deli, Salads & Cooked Meats  ...        NaN
+5   9421901665135 I Love Pies Free Range Chicken, ...  ...     $16.49
+6                                    Mustard Pie 870g  ...        NaN
+7   9421901665012 I Love Pies Angus Beef Mince & M...  ...     $16.49
+8                                     Cheese Pie 900g  ...        NaN
+9   9418705003379 Greater! Roasted Garlic Hummmus ...  ...      $3.99
+10                                       Frozen Foods  ...        NaN
+11          9415077091942 Pams Frozen Blueberries 1kg  ...      $8.99
+12                                 Fruit & Vegetables  ...        NaN
+13                              04011 Produce Bananas  ...      $0.92
+14         9420015449822 Produce NZ Strawberries 250g  ...      $6.98
+15                04194 Produce Mariri Red Eve Apples  ...      $0.92
+16           9420015445961 Produce Bagged Lettuce 1ea  ...      $2.25
+17                        04421 Produce Packham Pears  ...      $0.91
+18               03392 Produce Bunched Asparagus 250g  ...      $5.98
+19                   9420015431384 Produce Celery 1ea  ...      $3.49
+
+[20 rows x 5 columns]
