@@ -1,0 +1,1184 @@
+Delivered-To: ravi@dealbase.com
+Received: by 2002:a1c:23cf:0:0:0:0:0 with SMTP id j198csp5528663wmj;
+        Wed, 20 Feb 2019 19:08:14 -0800 (PST)
+X-Received: by 2002:a50:97fc:: with SMTP id f57mr28110554edb.29.1550718494001;
+        Wed, 20 Feb 2019 19:08:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1550718493; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MBSFAVw9JAlAQKrT5FJZLXeFgVz8rwWlq4L4n2e9UM2IE4/KyUWzgCFwLeIfgXGBLa
+         OfalgBc/Io4GZwwT/SY0u977FzXb/DaYYMmjTX2P/m6f0Gi/pTX/aEyRSpq5RfAH3CXx
+         13yYJjfKTKJArNmoyT5hWKUCrOPzq8QYPXQ9BLZuTYnHzkWxRg/UHRv+UZAgyTu7m0/T
+         27AEdTIxjdF7MebRBcs+gWCBv+HsotZI/rljcNqRJQiYSUXBU7saosw1e7B9vb8jAO7j
+         ZmDBSik/rXlf/WVws6rK0d6As9pEBw/qPo0OsqDQcGOuSyQPrK80KpJ/GAiNmji/zy7a
+         ZRAQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=pg0x+qOeSFK0kSNMC/S7TFl9ozI5IBR8Uo/qQ265uQ4=;
+        b=QWJAqe/V73LmzJ53dfEoQCBGNIZKiAnxENr47dFcSU6T1Bo1O21X9aHVQFCF6Ip2sb
+         PhpbFHC+hzAKvaAJZ3d3Io0uSZnwcu0cQuYJdmCJSau3BuicQ69ZvxdiH6f/k3TSJmvN
+         XalT0HmIjCl4JJ7TVhz3aspE0fIkNNpGkaxNt1sqeCuoEBZsrng9vansyAQ8H+KiAwsd
+         zt3GSDW1z5CFtwLdjMWxqhZv+Zi2ZdKTOVmzcXiKxDvCeVrTGGlwchU9SXmiOFkZB0FX
+         2IIJukBv33jp8T1urjYA3ooRnhA1Zd3XFAwyoq+prgv2d2Q0DrTkCYGGUZk+dtBirLTx
+         QAsA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=iLecJtp3;
+       spf=pass (google.com: domain of xxxxxxx@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=xxxxxxx@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <xxxxxxx@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a37sor11641062edd.23.2019.02.20.19.08.13
+        for <ravi@dealbase.com>
+        (Google Transport Security);
+        Wed, 20 Feb 2019 19:08:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of xxxxxxx@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=iLecJtp3;
+       spf=pass (google.com: domain of xxxxxxx@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=xxxxxxx@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:reply-to:from:date:message-id
+         :subject:to;
+        bh=pg0x+qOeSFK0kSNMC/S7TFl9ozI5IBR8Uo/qQ265uQ4=;
+        b=iLecJtp38fCkalhwl/VGc8XmgvXY1tjjXCAztipaS/3JRNv4aD16j940NyURXI4QZA
+         5q+FmF7y54C89mbqdY+PZqTweyWCcP2yHmuyObEDUPsEuSflaqbt18dHl7Rgi55ywmru
+         DXVvPGum/VIsYfr139ouJR+mooIMLnAaTOkkcUgq1+QDFQwnqI7YtOlP+mbsuHj+xSge
+         EjcjK8VcWkLZj+p9iduReoGW2A8G6wuwz1OpiC4f1T0smgBVvHrcfkUSXPQOhPB3DE6j
+         +cFtdY37ImxHjzM9n1p+lRFOriEBT1X09DGXfyjkWjlBr2F4vytpdwyBAEH3DnrXj9pj
+         cqbA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:reply-to
+         :from:date:message-id:subject:to;
+        bh=pg0x+qOeSFK0kSNMC/S7TFl9ozI5IBR8Uo/qQ265uQ4=;
+        b=PuFk9HNkZWp8aRRTlUERIbTqxfG9pmtuei7qRsGVCPaqKTZL/pHghlIdkxbluaHOWI
+         iySX1qttO4L3n6DqJZ264yo5N08ZjvggAYfFqh/IyQKa6+X07/TLacRDFZ5c2l6lb9v6
+         c2eTTGGuNbO6eZPvbGmKNaiXml24VvzEDyrJa1YqFhvapQt30lhk8KvWn6IO8Mcg8nsg
+         tTH41sfrHivZtpD6V0eCtcydzpys8NEV9wHcEFYpJxThGlL4SdeIlyXEamKtxCdUA1no
+         tzccPPi24DZd5iW+1t0aRrQl3vtN4wGM4oPI78+cdO7hoxegyp2Uz0tBpsUaF4hLf0nv
+         MwLA==
+X-Gm-Message-State: AHQUAubC/zlfN3zmpAzLeZlZrMreed7JWLpI3F0cU44B9DfgaVxmaZPH
+	ff018K7h/ookltBQuecOG+ZeBnxgUS2e485HlMUHcXlv
+X-Google-Smtp-Source: AHgI3IZt6txcbCH6At3BDSI9lWK71j/iOrqDJrhav9APQZo8PlqKm9FwTZpfsdqatIPJL08yQ4vRklyC2AMHg6TUiX0=
+X-Received: by 2002:a50:97fc:: with SMTP id f57mr28110523edb.29.1550718493149;
+ Wed, 20 Feb 2019 19:08:13 -0800 (PST)
+MIME-Version: 1.0
+References: <ZAKLPEGFCN00163a99S0000a801@ZAKLPEGFEX001.progressive.co.nz>
+In-Reply-To: <ZAKLPEGFCN00163a99S0000a801@ZAKLPEGFEX001.progressive.co.nz>
+Reply-To: xxxxxxx@gmail.com
+From: XXXXXXXX <xxxxxxx@gmail.com>
+Date: Thu, 21 Feb 2019 16:07:59 +1300
+Message-ID: <CAJGnK0zF+gXY+Wn7z3u1-UweVdTD1mj-Fz=HFxYfjg=AHV7yag@mail.gmail.com>
+Subject: Fwd: Online Shopping Order Confirmation - Order ID: 10518549
+To: ravi@dealbase.com
+Content-Type: multipart/alternative; boundary="000000000000ee4f4605825ec810"
+
+--000000000000ee4f4605825ec810
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+There are 2 emails per order with Countdown.  The first is the order
+confirmation.   Post-purchase receipt to follow.
+
+---------- Forwarded message ---------
+From: Countdown Online Shopping <onlineshop@countdown.co.nz>
+Date: Sun, Feb 17, 2019 at 9:32 PM
+Subject: Online Shopping Order Confirmation - Order ID: 10518549
+To: <xxxxxxx@gmail.com>
+
+
+[image: Your order confirmation =E2=80=94 Countdown.co.nz]
+<http://shop.countdown.co.nz/?utm_source=3Donlineshop&utm_medium=3Demail&ut=
+m_content=3Dheader&utm_campaign=3Dorderconfirmation>
+Hi Seth
+
+*Order ID:* 10518549
+Thank you for shopping with Countdown Online Shopping, the details of your
+order are below:
+
+*Onecard Number:* 9480054606174. Click here to view your points balance
+<http://www.countdown.co.nz/onecard/>
+*Your order will be delivered to:*
+
+XXXXXXXX
+XXXXXXXX
+
+XXXXXXXX *Delivery date & time:*
+
+From 18/02/2019 1:30 p.m. -
+To: 18/02/2019 4:00 p.m.
+*Delivery Instructions:*
+
+
+
+Item Description Allow Subs Unit Price Qty Price
+coen bros bagels poppy seed Yes $4.80 Each 1.00 $4.80
+quality bakers english muffins splits Yes $3.00 Each 1.00 $3.00
+vogels toast bread sunflower & barley Yes $4.20 Each 1.00 $4.20
+countdown maple syrup Yes $7.00 Each 1.00 $7.00
+edmonds pancake mix shaker original Yes $2.50 Each 1.00 $2.50
+vitasoy almond milk unsweetened Yes $2.99 Each 2.00 $5.98
+golden crumpets rounds 300g Yes $2.00 Each 1.00 $2.00
+natural green eggs 20pk free range Yes $11.00 Each 1.00 $11.00
+pics peanut butter crunchy Yes $15.99 Each 1.00 $15.99
+tararua butter Yes $4.80 Each 1.00 $4.80
+bean supreme tofu firm style Yes $4.00 Each 1.00 $4.00
+delmaine black beans in chilli sauce Yes $1.99 Each 2.00 $3.98
+macro chick peas organic Yes $1.50 Each 2.00 $3.00
+nature valley crunchy muesli bars oats & honey 210g Yes $3.00 Each 1.00
+$3.00
+nature valley crunchy muesli bars variety 210g Yes $3.00 Each 1.00 $3.00
+pop n good popcorn light & buttery Yes $2.30 Each 1.00 $2.30
+ecostore dishwasher tablets Yes $9.99 Each 2.00 $19.98
+kiwi soft toilet paper 12pk prints 2ply Yes $3.50 Each 1.00 $3.50
+alpine cheese grated mozzarella Yes $7.50 Each 1.00 $7.50
+anchor protein plus yoghurt tub plain Yes $6.00 Each 1.00 $6.00
+bega stringers cheese snack cheese 160g Yes $6.00 Each 1.00 $6.00
+greater hummus roasted garlic Yes $5.80 Each 1.00 $5.80
+meadow fresh milk organic Yes $6.79 Each 1.00 $6.79
+countdown onions brown Yes $3.99 Each 1.00 $3.99
+fresh produce apples sweetango Yes $5.99 KG 1.00 $5.99
+fresh produce broccoli head Yes $1.80 Each 2.00 $3.60
+fresh produce carrots Yes $2.69 KG 1.50 $4.03
+fresh produce cauliflower whole Yes $2.99 Each 1.00 $2.99
+fresh produce cucumbers telegraph nz Yes $2.49 Each 1.00 $2.49
+fresh produce nectarines yellow flesh Yes $5.00 KG 0.75 $3.75
+fresh produce peaches yellow flesh Yes $5.00 KG 0.75 $3.75
+fresh produce plums red Yes $6.00 KG 0.75 $4.50
+fresh produce potatoes lotatoes Yes $7.99 Each 1.00 $7.99
+fresh produce tomatoes vintage harvest sugar babes Yes $3.00 Each 1.00 $3.0=
+0
+fresh produce watermelon seeded whole Yes $5.50 Each 1.00 $5.50
+the fresh grower lettuce cos sweet petite Yes $3.99 Each 1.00 $3.99
+fresh produce bananas organic fair trade Yes $3.99 Each 1.00 $3.99
+countdown mexican tortillas burrito 690g Yes $4.00 Each 1.00 $4.00
+delmaine olives pitted green Yes $4.99 Each 1.00 $4.99
+macro free range chicken stir fry Yes $10.00 Each 1.00 $10.00
+regal smoked salmon nz king sliced Yes $18.00 Each 2.00 $28.00
+Subtotal: $242.67
+Less Discount: $0.00
+Fulfilment Fee: $0.00
+Total (including GST): $242.67
+*Please Note:* This is not an invoice, it's an order confirmation. Your
+final invoice will be emailed to you when your order is dispatched.
+
+*Questions about online shopping?*
+
+=E2=80=A2 Need to modify or change your order? Call our Customer Care Team =
+on on
+0800 40 40 40.
+=E2=80=A2 Do you have any other questions regarding your Online Shopping or=
+der? Click
+here
+<https://shop.countdown.co.nz/shop/faqs?utm_source=3Donlineshop&utm_medium=
+=3Demail&utm_contentfaqs&utm_campaign=3Dorderconfirmation>
+to read our FAQs.
+=E2=80=A2 Want to receive email communications such as special offers or
+discounts? Click
+here
+<https://shop.countdown.co.nz/shop/accountdetails?utm_source=3Donlineshop&u=
+tm_medium=3Demail&utm_content=3Daccountdetails&utm_campaign=3Dorderconfirma=
+tion>
+to sign up.
+=E2=80=A2 Don't have a Onecard? Apply online
+<https://www.countdown.co.nz/onecard/ready-to-register> now.
+=E2=80=A2 Earn Double Onecard points at Countdown with a Onecard Visa.* Cli=
+ck here
+to apply online <https://www.countdown.co.nz/onecard/onecard-visa/>.
+
+If you wish to cancel your order after the order has been dispatched, a $20
+cancellation fee, additional fees associated with the cost of courier
+delivery and subsequent costs associated with returning the order, may be
+incurred. Liquor and Tobacco will not be sold to any person under the age
+of 18 years. You may be required to produce ID when your order is delivered=
+.
+
+Click here for full terms & conditions
+<http://shop.countdown.co.nz/shop/termsandconditions?utm_source=3Donlinesho=
+p&utm_medium=3Demail&utm_content=3Dtermsandconditions&utm_campaign=3Dorderc=
+onfirmation>
+.
+[image: Click & Collect]
+* Reward points from bonus point promotions will not be doubled.
+
+Don't forget to add us to your email contact list! You may be missing out
+on Online Shopping emails due to spam filtering.
+
+This email was sent to *(961051) xxxxxxx@gmail.com <xxxxxxx@gmail.com>*.
+You have received this email as you have indicated that we may contact you
+via email for online shopping purposes. This email may contain code that
+measures email response rates and click through activity. If you need
+assistance, use the links below:
+
+*Update your details:*
+Log into our website at shop.countdown.co.nz
+<http://shop.countdown.co.nz/?utm_source=3Donlineshop&utm_medium=3Demail&ut=
+m_content=3Dhomepage&utm_campaign=3Dorderconfirmation>
+to update your preferences in the 'My Account
+<http://shop.countdown.co.nz/shop/accountdetails?utm_source=3Donlineshop&ut=
+m_medium=3Demail&utm_content=3Dupdatedetails&utm_campaign=3Dorderconfirmati=
+on>'
+section online.
+
+*Contact Customer Service:*
+Email onlineshop@countdown.co.nz or phone 0800 40 40 40
+
+Woolworths New Zealand Limited, 80 Favona Road, Mangere, Auckland, New
+Zealand
+Copyright 2018 Woolworths New Zealand Limited
+------------------------------
+CAUTION: This email and files included in its transmission are solely
+intended for the use of the addressee(s) and may contain information that
+is confidential and privileged. If you receive this email in error, please
+advise us immediately and delete it without copying the contents contained
+within. Woolworths Limited (including its group of companies) do not accept
+liability for the views expressed within or the consequences of any
+computer viruses that may be transmitted with this email. The contents are
+also subject to copyright. No part of it should be reproduced, adapted or
+transmitted without the written consent of the copyright owner.
+------------------------------
+
+--000000000000ee4f4605825ec810
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br></div>There are 2 emails per order with Countdown=
+.=C2=A0 The first is the order confirmation.=C2=A0 =C2=A0Post-purchase rece=
+ipt to follow.=C2=A0<br><br><div class=3D"gmail_quote"><div dir=3D"ltr" cla=
+ss=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong c=
+lass=3D"gmail_sendername" dir=3D"auto">Countdown Online Shopping</strong> <=
+span dir=3D"ltr">&lt;<a href=3D"mailto:onlineshop@countdown.co.nz" target=
+=3D"_blank">onlineshop@countdown.co.nz</a>&gt;</span><br>Date: Sun, Feb 17,=
+ 2019 at 9:32 PM<br>Subject: Online Shopping Order Confirmation - Order ID:=
+ 10518549<br>To:  &lt;<a href=3D"mailto:xxxxxxx@gmail.com" target=3D"_blank=
+">xxxxxxx@gmail.com</a>&gt;<br></div><br><br><u></u>
+ =20
+  =20
+  =20
+
+  =20
+
+ =20
+  <div>
+
+   <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+    <tbody><tr>
+     <td style=3D"background:#fff">
+
+      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600"=
+ align=3D"center">
+       <tbody><tr>
+        <td height=3D"30" width=3D"600"></td>
+       </tr>
+       <tr>
+        <td height=3D"114" width=3D"600"><a href=3D"http://shop.countdown.c=
+o.nz/?utm_source=3Donlineshop&amp;utm_medium=3Demail&amp;utm_content=3Dhead=
+er&amp;utm_campaign=3Dorderconfirmation" title=3D"Your order confirmation =
+=E2=80=94 Countdown.co.nz" target=3D"_blank"><img src=3D"http://shop.countd=
+own.co.nz/content/f19orderconfirmation_headerv2.jpg" height=3D"114" width=
+=3D"600" border=3D"0" alt=3D"Your order confirmation =E2=80=94 Countdown.co=
+.nz"></a></td>
+       </tr>
+       <tr>
+        <td style=3D"font-weight:normal;font-size:11px;font-family:arial,sa=
+ns-serif;text-align:left;padding:0 15px;border-left:2px solid #39474f;borde=
+r-right:2px solid #39474f">
+
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+ <tbody><tr valign=3D"top">
+  <td style=3D"font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left;border-right:15px solid #fff">
+
+Hi Seth<br><br>
+
+  </td>
+  <td style=3D"font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:right">
+
+<strong>Order ID:</strong> 10518549
+
+
+
+  </td>
+ </tr>
+ <tr valign=3D"top">
+  <td style=3D"font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left" colspan=3D"2">
+
+Thank you for shopping with Countdown Online Shopping, the details of your =
+order are below:<br><br>
+
+  </td>
+ </tr>
+ <tr valign=3D"top">
+  <td style=3D"background:#e7efda;padding:15px;font-weight:normal;font-size=
+:11px;font-family:arial,sans-serif;text-align:left;border-bottom:15px solid=
+ #fff" colspan=3D"2">
+
+<strong>Onecard Number:</strong> 9480054606174. <a href=3D"http://www.count=
+down.co.nz/onecard/" target=3D"_blank">Click here to view your points balan=
+ce</a>
+
+  </td>
+ </tr>
+ <tr valign=3D"top">
+  <td style=3D"background:#ebebdd;padding:15px;font-weight:normal;font-size=
+:11px;font-family:arial,sans-serif;text-align:left;border-right:15px solid =
+#fff">
+
+<strong style=3D"color:#08591f">Your order will be delivered to:</strong><b=
+r><br>
+
+XXXXXXXX<br>
+XXXXXXXX<br>
+<br>
+XXXXXXXX
+
+  </td>
+  <td style=3D"background:#ebebdd;padding:15px;font-weight:normal;font-size=
+:11px;font-family:arial,sans-serif;text-align:left">
+
+<span>
+
+<strong style=3D"color:#08591f">Delivery date &amp; time:</strong><br><br>
+
+From 18/02/2019 1:30 p.m. - <br>
+To: 18/02/2019 4:00 p.m.
+
+</span>
+
+  </td>
+ </tr>
+</tbody></table><br>
+
+<strong>Delivery Instructions:</strong><br><br>
+
+<br><br>
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+ <tbody><tr>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff">Item Description</td>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff" width=3D"100">Allow Subs</td>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff" width=3D"100">Unit Price</td>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff">Qty</td>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff">Price</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">coen bros bagels poppy seed  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$4.80 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.80</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">quality bakers english muffins splits  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">vogels toast bread sunflower &amp; barley  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$4.20 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.20</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">countdown maple syrup   </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$7.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$7.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">edmonds pancake mix shaker original  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.50 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$2.50</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">vitasoy almond milk unsweetened  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">2.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$5.98</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">golden crumpets rounds 300g  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$2.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">natural green eggs 20pk free range  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$11.00 Eac=
+h</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$11.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">pics peanut butter crunchy  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$15.99 Eac=
+h</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$15.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">tararua butter   </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$4.80 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.80</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">bean supreme tofu firm style  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$4.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">delmaine black beans in chilli sauce  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$1.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">2.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.98</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">macro chick peas organic  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$1.50 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">2.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">nature valley crunchy muesli bars oats &amp; honey 210g=
+  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">nature valley crunchy muesli bars variety 210g  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">pop n good popcorn light &amp; buttery  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.30 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$2.30</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">ecostore dishwasher tablets   </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$9.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">2.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$19.98</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">kiwi soft toilet paper 12pk prints 2ply  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.50 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.50</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">alpine cheese grated mozzarella  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$7.50 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$7.50</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">anchor protein plus yoghurt tub plain  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$6.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$6.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">bega stringers cheese snack cheese 160g  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$6.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$6.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">greater hummus roasted garlic  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$5.80 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$5.80</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">meadow fresh milk organic   </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$6.79 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$6.79</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">countdown onions brown  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce apples sweetango  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$5.99 KG</=
+td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$5.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce broccoli head  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$1.80 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">2.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.60</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce carrots   </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.69 KG</=
+td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.50</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.03</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce cauliflower whole  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$2.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce cucumbers telegraph nz  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$2.49 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$2.49</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce nectarines yellow flesh  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$5.00 KG</=
+td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">0.75</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.75</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce peaches yellow flesh  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$5.00 KG</=
+td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">0.75</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.75</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce plums red  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$6.00 KG</=
+td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">0.75</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.50</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce potatoes lotatoes  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$7.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$7.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce tomatoes vintage harvest sugar babes  </t=
+d>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce watermelon seeded whole  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$5.50 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$5.50</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">the fresh grower lettuce cos sweet petite  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">fresh produce bananas organic fair trade  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$3.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$3.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">countdown mexican tortillas burrito 690g  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$4.00 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">delmaine olives pitted green  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$4.99 Each=
+</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$4.99</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">macro free range chicken stir fry   </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$10.00 Eac=
+h</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">1.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$10.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;border-bottom:=
+1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-ser=
+if;text-align:left">regal smoked salmon nz king sliced  </td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">Yes</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">$18.00 Eac=
+h</td>
+  <td style=3D"padding:6px 8px;border-bottom:1px solid #bbb;font-weight:nor=
+mal;font-size:11px;font-family:arial,sans-serif;text-align:left">2.00</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;border-bottom=
+:1px solid #bbb;font-weight:normal;font-size:11px;font-family:arial,sans-se=
+rif;text-align:left">$28.00</td>
+ </tr>
+
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;font-weight:no=
+rmal;font-size:11px;font-family:arial,sans-serif;text-align:right" colspan=
+=3D"4">Subtotal:</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;font-weight:n=
+ormal;font-size:11px;font-family:arial,sans-serif;text-align:left">$242.67<=
+/td>
+ </tr>
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;font-weight:no=
+rmal;font-size:11px;font-family:arial,sans-serif;text-align:right" colspan=
+=3D"4">Less Discount:</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;font-weight:n=
+ormal;font-size:11px;font-family:arial,sans-serif;text-align:left">$0.00</t=
+d>
+ </tr>
+ <tr>
+  <td style=3D"border-left:1px solid #257921;padding:6px 8px;font-weight:no=
+rmal;font-size:11px;font-family:arial,sans-serif;text-align:right" colspan=
+=3D"4">Fulfilment Fee:</td>
+  <td style=3D"border-right:1px solid #257921;padding:6px 8px;font-weight:n=
+ormal;font-size:11px;font-family:arial,sans-serif;text-align:left">$0.00</t=
+d>
+ </tr>
+ <tr>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff" colspan=3D"4">Total (including GST):</td>
+  <td bgcolor=3D"257921" style=3D"padding:6px 8px;font-weight:normal;font-s=
+ize:12px;font-family:arial,sans-serif;text-align:left;font-weight:bold;colo=
+r:#fff">$242.67</td>
+ </tr>
+</tbody></table><br>
+
+<strong>Please Note:</strong> This is not an invoice, it&#39;s an order con=
+firmation. Your final invoice will be emailed to you when your order is dis=
+patched.<br><br>
+
+<strong>Questions about online shopping?</strong><br><br>
+
+=E2=80=A2 Need to modify or change your order? Call our Customer Care Team =
+on on 0800 40 40 40.<br>
+
+=E2=80=A2 Do you have any other questions regarding your Online Shopping or=
+der? <a href=3D"https://shop.countdown.co.nz/shop/faqs?utm_source=3Donlines=
+hop&amp;utm_medium=3Demail&amp;utm_contentfaqs&amp;utm_campaign=3Dorderconf=
+irmation" target=3D"_blank">Click here</a> to read our FAQs.<br>
+
+=E2=80=A2 Want to receive email communications such as special offers or di=
+scounts? <a href=3D"https://shop.countdown.co.nz/shop/accountdetails?utm_so=
+urce=3Donlineshop&amp;utm_medium=3Demail&amp;utm_content=3Daccountdetails&a=
+mp;utm_campaign=3Dorderconfirmation" target=3D"_blank">Click here</a> to si=
+gn up.<br>
+
+=E2=80=A2 Don&#39;t have a Onecard? <a href=3D"https://www.countdown.co.nz/=
+onecard/ready-to-register" target=3D"_blank">Apply online</a> now.<br>
+
+=E2=80=A2 Earn Double Onecard points at Countdown with a Onecard Visa.* <a =
+href=3D"https://www.countdown.co.nz/onecard/onecard-visa/" target=3D"_blank=
+">Click here to apply online</a>.<br><br>
+
+If you wish to cancel your order after the order has been dispatched, a $20=
+ cancellation fee, additional fees associated with the cost of courier deli=
+very and subsequent costs associated with returning the order, may be incur=
+red.
+
+Liquor and Tobacco will not be sold to any person under the age of 18 years=
+. You may be required to produce ID when your order is delivered.<br><br>
+
+<a href=3D"http://shop.countdown.co.nz/shop/termsandconditions?utm_source=
+=3Donlineshop&amp;utm_medium=3Demail&amp;utm_content=3Dtermsandconditions&a=
+mp;utm_campaign=3Dorderconfirmation" target=3D"_blank">Click here for full =
+terms &amp; conditions</a>.<br>
+
+        </td>
+       </tr>
+       <tr>
+        <td height=3D"20" width=3D"600"><img src=3D"http://shop.countdown.c=
+o.nz/content/f13orderconfirmation_footer.jpg" height=3D"20" width=3D"600" b=
+order=3D"0" alt=3D"Click &amp; Collect"></td>
+       </tr>
+      </tbody></table>
+
+
+
+      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600"=
+ align=3D"center">
+       <tbody><tr>
+        <td style=3D"font-weight:normal;font-size:11px;font-family:arial,sa=
+ns-serif;text-align:left;padding:15px 0px;color:#747e83">
+
+* Reward points from bonus point promotions will not be doubled.<br><br>
+
+Don&#39;t forget to add us to your email contact list! You may be missing o=
+ut on Online Shopping emails due to spam filtering.<br><br>
+
+This email was sent to <strong>(961051) <a href=3D"mailto:xxxxxxx@gmail.com=
+" target=3D"_blank">xxxxxxx@gmail.com</a></strong>. You have received this =
+email as you have indicated that we may contact you via email for online sh=
+opping purposes. This email may contain code that measures email response r=
+ates and click through activity. If you need assistance, use the links belo=
+w:<br><br>
+
+
+
+<strong>Update your details:</strong><br>
+Log into our website at <a href=3D"http://shop.countdown.co.nz/?utm_source=
+=3Donlineshop&amp;utm_medium=3Demail&amp;utm_content=3Dhomepage&amp;utm_cam=
+paign=3Dorderconfirmation" style=3D"color:#39474f" target=3D"_blank"><span =
+style=3D"color:#39474f">shop.countdown.co.nz</span></a> to update your pref=
+erences in the &#39;<a href=3D"http://shop.countdown.co.nz/shop/accountdeta=
+ils?utm_source=3Donlineshop&amp;utm_medium=3Demail&amp;utm_content=3Dupdate=
+details&amp;utm_campaign=3Dorderconfirmation" style=3D"color:#39474f" title=
+=3D"Click here to access your account." target=3D"_blank"><span style=3D"co=
+lor:#39474f">My Account</span></a>&#39; section online.<br><br>
+
+<strong>Contact Customer Service:</strong><br>
+Email <a href=3D"mailto:onlineshop@countdown.co.nz" style=3D"color:#39474f"=
+ target=3D"_blank"><span style=3D"color:#39474f">onlineshop@countdown.co.nz=
+</span></a> or phone 0800 40 40 40<br><br>
+
+Woolworths New Zealand Limited, 80 Favona Road, Mangere, Auckland, New Zeal=
+and<br>
+Copyright 2018 Woolworths New Zealand Limited
+
+        </td>
+       </tr>
+      </tbody></table>
+
+     </td>
+    </tr>
+   </tbody></table>
+
+  <font face=3D"arial,helvetica,sans-serif" size=3D"2"><hr>CAUTION: This em=
+ail and files included in its transmission are solely intended for the use =
+of the addressee(s) and may contain information that is confidential and pr=
+ivileged. If you receive this email in error, please advise us immediately =
+and delete it without copying the contents contained within. Woolworths Lim=
+ited (including its group of companies) do not accept liability for the vie=
+ws expressed within or the consequences of any computer viruses that may be=
+ transmitted with this email. The contents are also subject to copyright. N=
+o part of it should be reproduced, adapted or transmitted without the writt=
+en consent of the copyright owner.<hr></font>
+</div>
+=20
+
+</div></div>
+
+--000000000000ee4f4605825ec810--
